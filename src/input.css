@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .player {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.controls {
+    margin-top: 20px;
+} */
+
+html {
+    scroll-behavior: smooth;
+}

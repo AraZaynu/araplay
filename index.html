@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>araplay</title>
+    <link href="dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" type="x-icon" href="/src/profil1.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header" data-aos="fade-down" data-aos-duration="1000"
+        class="lg:mx-auto bg-slate-800 top-0 left-0 w-full items-center z-10 fixed">
+        <div class="flex flex-wrap">
+            <div class="mx-auto py-4 items-center flex space-x-4">
+                <button id="open" class="" onclick="openMenu()">
+                    <ion-icon name="menu" class="w-10 h-10 text-white"></ion-icon>
+                </button>
+                <button id="close" class="hidden" onclick="closeMenu()">
+                    <ion-icon name="close" class="w-10 h-10 text-white"></ion-icon>
+                </button>
+            </div>
+            <div class=" flex space-x-4 items-center mx-auto ">
+                <a href="" class="font-ibmmono text-2xl font-semibold text-white">AraZaynu</a>
+                <!-- INSTAGRAM -->
+                <a href="https://www.instagram.com/arazaynu/" target="_blank"
+                    class="text-white hover:opacity-70 transition ease-in-out duration-200">
+                    <svg class="fill-current" width="20" role="img" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <title>Instagram</title>
+                        <path
+                            d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+                    </svg>
+                </a>
+                <!-- YOUTUBE -->
+                <a href="https://www.youtube.com/@arazaynu/videos" target="_blank"
+                    class="text-white hover:opacity-70 transition ease-in-out duration-200">
+                    <svg class="fill-current" width="21" role="img" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <title>YouTube</title>
+                        <path
+                            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    </svg>
+                </a>
+                <!-- GITHUB -->
+                <a href="https://github.com/AraZaynu" target="_blank"
+                    class="text-white hover:opacity-70 transition ease-in-out duration-200">
+                    <svg class="fill-current" width="20" role="img" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <title>GitHub</title>
+                        <path
+                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <!-- menubar -->
+        <nav id="menu"
+            class="hidden absolute bg-white shadow-md rounded-md border-slate-800 border-2 w-52 mt-4 ml-2 pl-4 py-4">
+            <ul class="list-disc list-inside space-y-2">
+                <li><a href="#seandainya"
+                        class="text-slate-800 font-ibmmono text-sm underline underline-offset-2 font-semibold">Seandainya
+                        Lofi</a></li>
+                <li><a href="#tanawolio"
+                        class="text-slate-800 font-ibmmono text-sm underline underline-offset-2 font-semibold">Tana
+                        Wolio
+                        Cover</a></li>
+                <li><a href="#hujan"
+                        class="text-slate-800 font-ibmmono text-sm underline underline-offset-2 font-semibold">Hujan
+                        Cover</a></li>
+                <li><a href="#marsnesacik"
+                        class="text-slate-800 font-ibmmono text-sm underline underline-offset-2 font-semibold">Mars
+                        Nesacik</a></li>
+                <li><a href="#tanpatergesa"
+                        class="text-slate-800 font-ibmmono text-sm underline underline-offset-2 font-semibold">Tanpa
+                        Tergesa
+                        Lofi</a></li>
+                <li><a href="#flymetothemoon"
+                        class="text-slate-800 font-ibmmono text-sm underline underline-offset-2 font-semibold">Fly Me To
+                        The
+                        Moon</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- judul -->
+    <div class="mt-28" data-aos="fade-right" data-aos-duration="1000">
+        <h1 class="text-center text-4xl text-slate-800 font-ibmmono font-semibold">
+            ara.play()
+        </h1>
+    </div>
+    <!-- musik -->
+    <div class="">
+        <!-- 1 -->
+        <div id="seandainya" data-aos="fade-left" data-aos-duration="1000"
+            class="player text-center pt-8 px-8 pb-4 rounded-md border border-slate-600 shadow-lg w-72 mx-auto mt-10">
+            <audio class="audio" src="/aramusic/seandainya.mp3"></audio>
+            <img src="/src/thumbnail/seandainya.png" alt="cover"
+                class="aspect-video w-64 mx-auto border border-slate-600 rounded-lg shadow-md">
+            <h2 class="title mt-2 font-ibmmono font-semibold text-slate-800 leading-tight">Vierra - Seandainya Remix
+                lofi by arazaynu</h2>
+
+            <p class="duration mt-4 font-ibmsans font-semibold text-slate-800">00:00</p>
+            <div class="controls mb-4">
+                <!-- seek -->
+                <input type="range" class="seek w-56" min="0" step="1" value="0">
+                <!-- btn play -->
+                <button class="play">
+                    <ion-icon name="play" size="large"
+                        class="text-slate-800 hover:text-slate-600 transition-all duration-100"></ion-icon>
+                </button>
+                <!-- btn pause -->
+                <button class="pause hidden">
+                    <ion-icon name="pause" size="large"
+                        class="text-slate-800 hover:text-slate-600 transition-all duration-100"></ion-icon>
+                </button>
+                <!-- btn volume 1 -->
+                <button class="btn_volume">
+                    <ion-icon name="volume-high" size="large"
+                        class="text-slate-800 hover:text-slate-600 transition-all duration-100"></ion-icon>
+                    <!-- slider volume -->
+                    <input type="range" class="volume w-20 hidden absolute" min="0" max="1" step="0.01" value="1">
+                </button>
+                <!-- volume button 2 -->
+                <button class="btn_volume2 hidden">
+                    <ion-icon name="volume-mute" size="large"
+                        class="text-slate-800 hover:text-slate-600 transition-all duration-100"></ion-icon>
+                    <!-- slider volume -->
+                    <input type="range" class="volume w-20 hidden absolute" min="0" max="1" step="0.01" value="1">
+                </button>
+            </div>
+            <a href="https://www.youtube.com/watch?v=fD5hsBuo3bA"
+                class="font-ibmsans font-semibold text-slate-800 text-sm underline underline-offset-2">Lihat di
+                Youtube</a>
+        </div>
+        <!-- 2 -->
+        <div id="tanawolio" data-aos="fade-right" data-aos-duration="1000"
+            class="player text-center pt-8 px-8 pb-4 rounded-md border border-slate-600 shadow-lg w-72 mx-auto mt-10">
+            <audio class="audio" src="/aramusic/tana_wolio.mp3"></audio>
+            <img src="/src/thumbnail/tanawolio.png" alt="cover"
+                class="aspect-video w-64 mx-auto border border-slate-600 rounded-lg shadow-md">
+            <h2 class="title mt-2 font-ibmmono font-semibold text-slate-800 leading-tight">Tana Wolio Cover by arazaynu
+            </h2>
+
+            <p class="duration mt-4 font-ibmsans font-semibold text-slate-800">00:00</p>
+            <div class="controls mb-4">
+                <!-- seek -->
+                <input type="range" class="seek w-56" min="0" step="1" value="0">
+                <!-- btn play -->
+                <button class="play">
+                    <ion-icon name="play" size="large"
+                        class="text-slate-800 hover:text-slate-600 transition-all duration-100"></ion-icon>
+                </button>
+                <!-- btn pause -->
+                <button class="pause hidden">
+                    <ion-icon name="pause" size="large"
+                        class="text-slate-800 hover:text-slate-600 transition-all duration-100"></ion-icon>
+                </button>
+                <!-- btn volume 1 -->
+                <button class="btn_volume">
+                    <ion-icon name="volume-high" size="large"
+                        class="text-slate-800 hover:text-slate-600 transition-all duration-100"></ion-icon>
+                    <!-- slider volume -->
+                    <input type="range" class="volume w-20 hidden absolute" min="0" max="1" step="0.01" value="1">
+                </button>
+                <!-- volume button 2 -->
+                <button class="btn_volume2 hidden">
+                    <ion-icon name="volume-mute" size="large"
+                        class="text-slate-800 hover:text-slate-600 transition-all duration-100"></ion-icon>
+                    <!-- slider volume -->
+                    <input type="range" class="volume w-20 hidden absolute" min="0" max="1" step="0.01" value="1">
+                </button>
+            </div>
+            <a href="https://www.youtube.com/watch?v=vLLK5k_koAY"
+                class="font-ibmsans font-semibold text-slate-800 text-sm underline underline-offset-2">Lihat di
+                Youtube</a>
+        </div>
+        <!-- 3 -->
+        <div id="hujan" data-aos="fade-left" data-aos-duration="1000"
+            class="player text-center pt-8 px-8 pb-4 rounded-md border border-slate-600 shadow-lg w-72 mx-auto mt-10">
+            <audio class="audio" src="/aramusic/hujan.mp3"></audio>
+            <img src="/src/thumbnail/hujan.png" alt="cover"
+                class="aspect-video w-64 mx-auto border border-slate-600 rounded-lg shadow-md">
+            <h2 class="title mt-2 font-ibmmono font-semibold text-slate-800 leading-tight">Utopia - hujan Cover by
+                arazaynu</h2>
+
+            <p class="duration mt-4 font-ibmsans font-semibold text-slate-800">00:00</p>
+            <div class="controls mb-4">
+                <!-- seek -->
+                <input type="range" class="seek w-56" min="0" step="1" value="0">
+                <!-- btn play -->
+                <button class="play">
+                    <ion-icon name="play" size="large"
+                        class="text-slate-800 hover:text-slate-600 transition-all duration-100"></ion-icon>
+                </button>
+                <!-- btn pause -->
+                <button class="pause hidden">
+                    <ion-icon name="pause" size="large"
+                        class="text-slate-800 hover:text-slate-600 transition-all duration-100"></ion-icon>
+                </button>
+                <!-- btn volume 1 -->
+                <button class="btn_volume">
+                    <ion-icon name="volume-high" size="large"
+                        class="text-slate-800 hover:text-slate-600 transition-all duration-100"></ion-icon>
+                    <!-- slider volume -->
+                    <input type="range" class="volume w-20 hidden absolute" min="0" max="1" step="0.01" value="1">
+                </button>
+                <!-- volume button 2 -->
+                <button class="btn_volume2 hidden">
+                    <ion-icon name="volume-mute" size="large"
+                        class="text-slate-800 hover:text-slate-600 transition-all duration-100"></ion-icon>
+                    <!-- slider volume -->
+                    <input type="range" class="volume w-20 hidden absolute" min="0" max="1" step="0.01" value="1">
+                </button>
+            </div>
+            <a href="https://www.youtube.com/watch?v=K4TCJzjoiAo"
+                class="font-ibmsans font-semibold text-slate-800 text-sm underline underline-offset-2">Lihat di
+                Youtube</a>
+        </div>
+        <!-- 4 -->
+        <div id="marsnesacik" data-aos="fade-right" data-aos-duration="1000"
+            class="player text-center pt-8 px-8 pb-4 rounded-md border border-slate-600 shadow-lg w-72 mx-auto mt-10">
+            <audio class="audio" src="/aramusic/mars_nesacik.mp3"></audio>
+            <img src="/src/thumbnail/mars_nesacik.png" alt="cover"
+                class="aspect-video w-64 mx-auto border border-slate-600 rounded-lg shadow-md">
+            <h2 class="title mt-2 font-ibmmono font-semibold text-slate-800 leading-tight">Mars Nesacik</h2>
+
+            <p class="duration mt-4 font-ibmsans font-semibold text-slate-800">00:00</p>
+            <div class="controls mb-4">
+                <!-- seek -->
+                <input type="range" class="seek w-56" min="0" step="1" value="0">
+                <!-- btn play -->
+                <button class="play">
+                    <ion-icon name="play" size="large"
+                        class="text-slate-800 hover:text-slate-600 transition-all duration-100"></ion-icon>
+                </button>
+                <!-- btn pause -->
+                <button class="pause hidden">
+                    <ion-icon name="pause" size="large"
+                        class="text-slate-800 hover:text-slate-600 transition-all duration-100"></ion-icon>
+                </button>
+                <!-- btn volume 1 -->
+                <button class="btn_volume">
+                    <ion-icon name="volume-high" size="large"
+                        class="text-slate-800 hover:text-slate-600 transition-all duration-100"></ion-icon>
+                    <!-- slider volume -->
+                    <input type="range" class="volume w-20 hidden absolute" min="0" max="1" step="0.01" value="1">
+                </button>
+                <!-- volume button 2 -->
+                <button class="btn_volume2 hidden">
+                    <ion-icon name="volume-mute" size="large"
+                        class="text-slate-800 hover:text-slate-600 transition-all duration-100"></ion-icon>
+                    <!-- slider volume -->
+                    <input type="range" class="volume w-20 hidden absolute" min="0" max="1" step="0.01" value="1">
+                </button>
+            </div>
+            <a href="https://www.youtube.com/watch?v=TgOorUiN7YQ"
+                class="font-ibmsans font-semibold text-slate-800 text-sm underline underline-offset-2">Lihat di
+                Youtube</a>
+        </div>
+        <!-- 5 -->
+        <div id="tanpatergesa" data-aos="fade-left" data-aos-duration="1000"
+            class="player text-center pt-8 px-8 pb-4 rounded-md border border-slate-600 shadow-lg w-72 mx-auto mt-10">
+            <audio class="audio" src="/aramusic/tanpa_tergesa.mp3"></audio>
+            <img src="/src/thumbnail/tanpatergesa.png" alt="cover"
+                class="aspect-video w-64 mx-auto border border-slate-600 rounded-lg shadow-md">
+            <h2 class="title mt-2 font-ibmmono font-semibold text-slate-800 leading-tight">Juicy Luicy - Tanpa Tergesa
+                Remix lofi by arazaynu</h2>
+
+            <p class="duration mt-4 font-ibmsans font-semibold text-slate-800">00:00</p>
+            <div class="controls mb-4">
+                <!-- seek -->
+                <input type="range" class="seek w-56" min="0" step="1" value="0">
+                <!-- btn play -->
+                <button class="play">
+                    <ion-icon name="play" size="large"
+                        class="text-slate-800 hover:text-slate-600 transition-all duration-100"></ion-icon>
+                </button>
+                <!-- btn pause -->
+                <button class="pause hidden">
+                    <ion-icon name="pause" size="large"
+                        class="text-slate-800 hover:text-slate-600 transition-all duration-100"></ion-icon>
+                </button>
+                <!-- btn volume 1 -->
+                <button class="btn_volume">
+                    <ion-icon name="volume-high" size="large"
+                        class="text-slate-800 hover:text-slate-600 transition-all duration-100"></ion-icon>
+                    <!-- slider volume -->
+                    <input type="range" class="volume w-20 hidden absolute" min="0" max="1" step="0.01" value="1">
+                </button>
+                <!-- volume button 2 -->
+                <button class="btn_volume2 hidden">
+                    <ion-icon name="volume-mute" size="large"
+                        class="text-slate-800 hover:text-slate-600 transition-all duration-100"></ion-icon>
+                    <!-- slider volume -->
+                    <input type="range" class="volume w-20 hidden absolute" min="0" max="1" step="0.01" value="1">
+                </button>
+            </div>
+            <a href="https://www.youtube.com/watch?v=k3Od_ZYXRtU"
+                class="font-ibmsans font-semibold text-slate-800 text-sm underline underline-offset-2">Lihat di
+                Youtube</a>
+        </div>
+        <!-- 6 -->
+        <div id="flymetothemoon" data-aos="fade-right" data-aos-duration="1000"
+            class="player text-center pt-8 px-8 pb-4 rounded-md border border-slate-600 shadow-lg w-72 mx-auto mt-10">
+            <audio class="audio" src="/aramusic/flymeto_themoon.mp3"></audio>
+            <img src="/src/thumbnail/flymetothemoon.png" alt="cover"
+                class="aspect-video w-64 mx-auto border border-slate-600 rounded-lg shadow-md">
+            <h2 class="title mt-2 font-ibmmono font-semibold text-slate-800 leading-tight">Fly Me To The Moon - Frank
+                Sinatra lofi ver by arazaynu</h2>
+
+            <p class="duration mt-4 font-ibmsans font-semibold text-slate-800">00:00</p>
+            <div class="controls mb-4">
+                <!-- seek -->
+                <input type="range" class="seek w-56" min="0" step="1" value="0">
+                <!-- btn play -->
+                <button class="play">
+                    <ion-icon name="play" size="large"
+                        class="text-slate-800 hover:text-slate-600 transition-all duration-100"></ion-icon>
+                </button>
+                <!-- btn pause -->
+                <button class="pause hidden">
+                    <ion-icon name="pause" size="large"
+                        class="text-slate-800 hover:text-slate-600 transition-all duration-100"></ion-icon>
+                </button>
+                <!-- btn volume 1 -->
+                <button class="btn_volume">
+                    <ion-icon name="volume-high" size="large"
+                        class="text-slate-800 hover:text-slate-600 transition-all duration-100"></ion-icon>
+                    <!-- slider volume -->
+                    <input type="range" class="volume w-20 hidden absolute" min="0" max="1" step="0.01" value="1">
+                </button>
+                <!-- volume button 2 -->
+                <button class="btn_volume2 hidden">
+                    <ion-icon name="volume-mute" size="large"
+                        class="text-slate-800 hover:text-slate-600 transition-all duration-100"></ion-icon>
+                    <!-- slider volume -->
+                    <input type="range" class="volume w-20 hidden absolute" min="0" max="1" step="0.01" value="1">
+                </button>
+            </div>
+            <a href="https://www.youtube.com/watch?v=Nw-6cAVAzts"
+                class="font-ibmsans font-semibold text-slate-800 text-sm underline underline-offset-2">Lihat di
+                Youtube</a>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer data-aos="fade-up" data-aos-duration="1000" id="footer" class="lg:mx-auto lg:w-96 mt-14 pb-6 bg-slate-800">
+        <div class=" mt-10 w-full justify-center px-8">
+            <div class="flex flex-wrap">
+                <p class=" font-ibmmono text-xl mt-4 text-white mx-auto">Hallo!, Saya <span
+                        class="underline underline-offset-2">AraZaynu</span></p>
+
+                <p class="font-ibmmono mt-4 text-sm mx-auto text-premier tracking-tighter text-white"> kali ini saya
+                    membuat website musik player dengan javascript. berisi kumpulan lagu yang di
+                    remix oleh saya. dengan
+                    keterbatasan
+                    ilmu, saya
+                    terbuka
+                    atas kritik dan saran, terimakasih</p>
+                <p class="font-IBM text-sm mx-auto text-premier tracking-tighter text-white">@arazaynu</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="menu.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
