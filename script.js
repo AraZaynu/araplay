@@ -76,6 +76,10 @@ window.addEventListener('DOMContentLoaded', () => {
       pauseButton.addEventListener('click', pause);
   
       // Event listener untuk seek bar
+      audio.addEventListener('loadedmetadata', () => {
+        seekBar.max = audio.duration;
+      });
+      
       seekBar.addEventListener('input', seek);
   
       // Event listener untuk volume bar
